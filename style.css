@@ -12,17 +12,22 @@ body {
 }
 
 .container {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: gainsboro;
-  padding: 0 24px;
+  /* background-color: gainsboro; */
+  gap: 24px;
+  width: 100%;
+  padding: 24px;
+  z-index: 99;
 }
 
 #map {
   width: 100vw;
-  height: 180px;
+  height: 100vh;
+  z-index: -1;
 }
 
 a {
@@ -36,7 +41,7 @@ a:hover {
 }
 
 h1 {
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
 }
 
 .form-input {
@@ -71,7 +76,7 @@ h1 {
 .output-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 }
 
 .output-inner h2 {
@@ -82,5 +87,16 @@ h1 {
 
 .output-inner p {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 500;
 }
+
+.output-inner div {
+  flex-basis: 25%;
+  padding: 0 24px;
+}
+
+/* .output-inner div:nth-child(2),
+.output-inner div:nth-child(3) {
+  border-left: solid 1px red;
+  border-right: solid 1px red;
+} */
