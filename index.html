@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <h1 class="title">IP Address Tracker</h1>
+      <form id="form-input" class="form-input">
+        <input id="input-ipaddress" type="text" placeholder="Search for any IP address or domain">
+        <button type="submit">Submit</button>
+      </form>
+      <div class="output">
+        <div class="output-inner">
+          <div class="ip-address">
+            <h2>IP ADDRESS</h2>
+            <p>8.8.8.8</p>
+          </div>
+          <div class="location">
+            <h2>IP ADDRESS</h2>
+            <p>8.8.8.8</p>
+          </div>
+          <div class="timezone">
+            <h2>IP ADDRESS</h2>
+            <p>8.8.8.8</p>
+          </div>
+          <div class="isp">
+            <h2>IP ADDRESS</h2>
+            <p>8.8.8.8</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="map"></div>
+
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
