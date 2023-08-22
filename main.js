@@ -1,6 +1,6 @@
 import './style.css'
-import { showMap } from './showmap'
-import fetchData from './fetchdata'
+import { showMap } from './show_map'
+import fetchData from './fetch_data'
 
 let data = [];
 const outputIpAddress = document.getElementById("output-ip-address")
@@ -10,6 +10,9 @@ const outputIsp = document.getElementById("output-isp")
 
 document.addEventListener("DOMContentLoaded", async () => {
   showMap()
+  const dataDefault = await fetchData()
+  data[0] = dataDefault
+  console.log(data)
 })
 
 const formInput = document.getElementById('form-input')
