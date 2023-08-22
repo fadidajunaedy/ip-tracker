@@ -1,6 +1,7 @@
 import './style.css'
 import { showMap } from './show_map'
-import fetchData from './fetch_data'
+import { fetchData } from './fetch_data'
+import { showData } from './show_data'
 
 let data = [];
 const outputIpAddress = document.getElementById("output-ip-address")
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   showMap()
   const dataDefault = await fetchData()
   data[0] = dataDefault
+  showData(data)
   console.log(data)
 })
 
@@ -23,11 +25,5 @@ formInput.addEventListener("submit", async (e) => {
   const dataIp = await fetchData(inputIpAddress)
   data[0] = dataIp;
 
-  outputIpAddress.innerText = data[0].ip
-  outputLocation.innerText = data[0].location.country + ", " + data[0].location.region
-  outputTimezone.innerText = data[0].location.timezone
-  outputIsp.innerText = data[0].isp
-
-  showMap(data[0].location.lat, data[0].location.lng, data[0].location.region)
-
+  showData(data)
 })

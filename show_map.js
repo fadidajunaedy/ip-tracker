@@ -1,4 +1,4 @@
-export function showMap(latitude = 51.505, longitude = -0.09, locationName) {
+export const showMap = (latitude = 51.505, longitude = -0.09, locationName) => {
     if (window.map) {
         document.getElementById("map").remove()
         window.map.remove();

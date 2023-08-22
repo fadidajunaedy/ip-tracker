@@ -1,4 +1,4 @@
-const fetchData = async (ipAddress) => {
+export const fetchData = async (ipAddress) => {
     const apiKey = "at_t2mWuETqEWMV2FR6xOCl94xDnOHvU"
     let response
     if (ipAddress) {
@@ -9,5 +9,3 @@ const fetchData = async (ipAddress) => {
     const data = await response.json()
     return data
 }
-
-export default fetchData;
