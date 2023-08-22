@@ -4,11 +4,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
-  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+  color: hsl(0, 0%, 17%);
 }
 
 .container {
@@ -17,31 +19,31 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: gainsboro; */
-  gap: 24px;
+  gap: 30px;
   width: 100%;
   padding: 24px;
-  z-index: 99;
+}
+
+.pattern {
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/pattern-bg-mobile.png");
 }
 
 #map {
   width: 100vw;
-  height: 100vh;
+  height: 60vh;
+  position: absolute;
   z-index: -1;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
 h1 {
-  /* margin-bottom: 24px; */
+  font-size: 24px;
+  font-weight: 400;
+  color: #FFFFFF;
 }
 
 .form-input {
@@ -59,10 +61,21 @@ h1 {
   padding: 8px 16px;
   border: none;
   outline: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
 }
 
 .form-input button {
+  cursor: pointer;
   flex-basis: 10%;
+  background-color: hsl(0, 0%, 17%);
+  transition: all 0.3s ease;
+  color: #FFFFFF;
+  border: none;
+}
+
+.form-input button:hover {
+  background-color: hsl(0, 0%, 59%);
 }
 
 .output {
@@ -70,33 +83,54 @@ h1 {
   width: 100%;
   padding: 24px;
   border-radius: 12px;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 .output-inner {
   display: flex;
+  row-gap: 24px;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
 }
 
 .output-inner h2 {
-  font-size: 0.75rem;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: hsl(0, 0%, 59%);
   font-weight: 600;
   margin-bottom: 12px;
 }
 
 .output-inner p {
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 500;
 }
 
 .output-inner div {
   flex-basis: 25%;
   padding: 0 24px;
+  text-align: center;
 }
 
-/* .output-inner div:nth-child(2),
-.output-inner div:nth-child(3) {
-  border-left: solid 1px red;
-  border-right: solid 1px red;
-} */
+.leaflet-popup {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .pattern {
+    background-image: url("./images/pattern-bg-desktop.png");
+  }
+
+  .output-inner {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .output-inner div {
+    text-align: left;
+  }
+
+
+}

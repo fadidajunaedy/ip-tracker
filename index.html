@@ -17,8 +17,10 @@
     <div class="container">
       <h1 class="title">IP Address Tracker</h1>
       <form id="form-input" class="form-input">
-        <input id="input-ipaddress" type="text" placeholder="Search for any IP address or domain">
-        <button type="submit">Submit</button>
+        <input id="input-ip-address" type="text" placeholder="Search for any IP address or domain">
+        <button type="submit">
+          <img src="./images/icon-arrow.svg" alt="" srcset="">
+        </button>
       </form>
       <div class="output">
         <div class="output-inner">
@@ -41,7 +43,11 @@
         </div>
       </div>
     </div>
-    <div id="map"></div>
+    <section id="output-map">
+      <div class="pattern">
+      </div>
+      <!-- Map shows here -->
+    </section>
 
   </main>
   <script type="module" src="/main.js"></script>
