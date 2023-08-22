@@ -8,7 +8,7 @@ const outputLocation = document.getElementById("output-location")
 const outputTimezone = document.getElementById("output-timezone")
 const outputIsp = document.getElementById("output-isp")
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   showMap()
 })
 
@@ -20,7 +20,6 @@ formInput.addEventListener("submit", async (e) => {
   const dataIp = await fetchData(inputIpAddress)
   data[0] = dataIp;
 
-  console.log(data[0].location)
   outputIpAddress.innerText = data[0].ip
   outputLocation.innerText = data[0].location.country + ", " + data[0].location.region
   outputTimezone.innerText = data[0].location.timezone
